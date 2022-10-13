@@ -1,38 +1,325 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=Merriweather:wght@300&family=Nunito+Sans:wght@200;300&family=Open+Sans:wght@300;&family=Raleway:wght@100;200;300;&display=swap');
+
+:root {
+  --primary: #03273fb9;
+  --secondary: #21d07a;
+  --white: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Freckle Face', cursive;
+  padding: 0;
+  margin: 0; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,h2,h3,h4,h5,h6{
+  margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.btn1{
+  border: none;
+   background-color:rgb(28, 89, 151);
+    color: rgb(11, 8, 8);
+    padding: 0px 10px;
+    font-size: 19px;
+        border-radius:10px 10px 10px;
+}
+.btn1:hover{
+  background-color: var(--primary);
+  transition: .5s ease-in;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.b_p{
+  text-align: center; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input:focus {
+  outline: none;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--primary);
+  
+}
+
+header .inner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+header a {
+  color: var(--white);
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+header a:hover {
+  opacity: 0.7;
+  color: rgb(255, 255, 255);
+}
+
+header .brand a {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+header .nav-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+header .nav-links li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+header .nav-links li:last-child {
+  margin-right: 0;
+}
+
+
+ul.nav-List {
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+ ul li{
+    padding-right: 10px;
+    list-style: none;
+ }
+
+ .card{
+  float: left;
+  margin: 1%;
+ width: 350px;
+height: 100%;
+border: 2px solid var(--primary);  
+}
+
+.card:hover {
+  border:1px solid var(--secondary);
+  box-shadow: 5px 15px 20px ;
+}
+.card img{
+  height:550px;
+  width: 100%;
+}
+span{
+  font-size: 12px;
+}
+.card-title{
+  font-family: 'Freckle Face', cursive;
+  text-align: center;
+}
+
+.fa{
+  color: rgb(255, 255, 255);
+
+}
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+.col-2{
+  margin-top: 40px;
+}
+
+input.form-control {
+  width: 300px;
+}
+.card_p h3{
+  font-size: 20px;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:rgba(3, 2, 8, 0.212);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  text-align: justify;
+
+}
+
+.card:hover .overlay {
+  height: 100%;
+}
+
+
+.icon .fa{
+color: black;
+}
+
+.img-over{
+  position: absolute;
+  bottom: 0;
+   
+  background-color:rgba(2, 0, 6, 0.092);
+  overflow: hidden;
+  width: 100%;
+  height:0%;
+  transition: .5s ease;
+  text-align: justify;
+}
+.card:hover .img-over{
+  height: 20%;
+}
+
+.butn{
+  padding:0px 40%;
+}
+
+.flex{
+  display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 40px;
+ 
+}
+ .img img{
+ width: 100%;
+  margin-left: -20px;
+
+}
+
+.details{
+  color: white;
+}
+
+h3{
+
+  color: white;
+}
+span {
+  font-size: 30px;
+  color: #21d07a;
+}
+
+.synopsis{
+ 
+  text-align: justify;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1;
+ 
+}
+
+.synopsises{
+ width: 550px;
+  text-align: justify;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1.1;
+  overflow: hidden;
+  color: white;
+ 
+}
+
+@media (min-width: 768px) and (max-width:1444px) {
+
+  
+  header{
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .card{
+    float: left;
+    margin: 2%;
+  width: 320px;
+  height: 100%;
+  border: 2px solid var(--primary);
   }
+}
+
+@media (min-width: 375px) and (max-width:768px) {
+
+  
+  header .inner-content {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  
+  .flex{
+    display: block;
+      justify-content: space-evenly;
+      width: 50%;
+      margin: 40px;
+   
+      
+  }
+
+  .img img{
+    width: 100%;
+     margin-left: 20px;
+   
+   }
+   .card{
+    margin: 10px;
+   }
+   
+   .details{
+     color: white;
+     width: 330px;
+   }
+
+   h3{
+    
+    color: white;
+  }
+  span {
+    font-size: 15px;
+    color: #21d07a;
+  }
+
+  .synopsises{
+    width: 330px;
+     text-align: justify;
+     padding: 10px 0px;
+     font-size: 16px;
+     line-height: 1.1;
+     overflow: hidden;
+     color: white;
+   }
+
+   
 }
